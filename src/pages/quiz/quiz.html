@@ -1,0 +1,40 @@
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Quiz {{name}} {{quizMetadata.title}}</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content overflow-scroll="false">
+  <ion-list no-lines radio-group [(ngModel)]="x.checked" 
+            *ngFor="let x of (quizMetadata.questions | subjectFilter: subjectValue)">   
+    
+    <ion-card>
+
+      <ion-item text-wrap id="ioncad">
+
+        <ion-label>{{x.question_number}} . {{x.question_expl}}</ion-label>      
+      
+      </ion-item>
+
+      <ion-item text-wrap *ngFor= "let y of x.answers">
+          <ion-radio item-left value={{y.answer}} checked></ion-radio>
+          <ion-label>{{y.answer}}</ion-label>
+      </ion-item>
+    </ion-card>
+
+  </ion-list>
+
+<br>
+  <button (click)="submit()" ion-button secondary>Submit</button>
+</ion-content>
+
+<!--
+<ion-footer>
+<ion-toolbar color="appheader"><ion-row><ion-col id="co"><ion-icon color="lit" name="home" (click)="home()" align-left>
+ <br>Home</ion-icon></ion-col>
+</ion-row>  </ion-toolbar>
+</ion-footer>
+-->
