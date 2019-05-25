@@ -1,8 +1,7 @@
 {
-  "name": "quizApp",
-  "app_id": "",
-  "type": "ionic-angular",
+  "name": "quizapp",
   "integrations": {
     "cordova": {}
-  }
+  },
+  "type": "angular"
 }

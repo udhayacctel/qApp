@@ -1,0 +1,68 @@
+
+span.title-change {
+  color: white;
+  font-size: 30px;
+  font-family: 'roboto regular', sans-serif;
+  margin-left: 40px;
+}
+
+ion-toolbar.welcome-card {
+
+    --padding-top: 4px;
+    --padding-bottom: 4px;
+    --padding-start: 4px;
+    --padding-end: 4px;
+    --min-height: 176px;
+    --ion-background-color:  rgb(81, 223, 116);
+    --ion-toolbar-background:  rgb(81, 223, 116);
+ 
+}
+
+ion-col.change-col {
+  padding-right: 184px;
+  padding-left: 0;
+  padding-top: 50px;
+  padding-bottom: 40px;
+}
+
+ion-row.change-row {
+  margin-left: -11px;
+  margin-right: -189px;
+}
+
+ion-label.change-label {
+
+    font-size: 20px;
+    font-style: normal;
+    font-stretch: condensed;
+    font-weight: inherit;
+    font-weight: initial;
+    font-kerning: normal;
+    font-family: 'roboto regular', sans-serif;
+    font-variant-caps: all-small-caps;
+}
+
+
+
+ion-button.change-color{
+    margin-left: 35px;
+    margin-right: 35px; 
+}
+
+ion-checkbox.change-style {
+
+    margin-right: 20px
+
+}
+
+ion-list.change-color {
+  background: mediumspringgreen;
+}
+
+ion-content.back_ground{
+  --ion-background-color:#111D12 !important;
+}
+
+ion-item.back_ground {
+  background: lemonchiffon;
+}

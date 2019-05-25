@@ -1,56 +1,40 @@
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ErrorHandler, NgModule } from '@angular/core';
-import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular'
-import { HttpModule } from '@angular/http';
-import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
-import { QuizPage } from '../pages/quiz/quiz';
-import { LoginPage } from '../pages/login/login';
-import { ResultPage } from '../pages/result/result';
-import { SubjectFilterPipe } from '../pages/filterSubject';
-import { StatusBar } from '@ionic-native/status-bar';
-import { SplashScreen } from '@ionic-native/splash-screen';
-import {GlobalProvider} from '../providers/globalProvider'
-import {QuizProvider} from '../providers/quizProvider'
+import { RouteReuseStrategy } from '@angular/router';
+
+import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
+import { SplashScreen } from '@ionic-native/splash-screen/ngx';
+import { StatusBar } from '@ionic-native/status-bar/ngx';
+
+import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
+
+import {GlobalProvider} from '../providers/globalProvider';
+import {QuizProvider} from '../providers/quizProvider';
+import { HttpModule } from '@angular/http'; 
 import { HttpClientModule } from '@angular/common/http';
-import { GooglePlus } from '@ionic-native/google-plus';
+import { HeaderColor } from '@ionic-native/header-color/ngx';
+
 
 
 @NgModule({
-  declarations: [
-    MyApp,
-    HomePage,
-    ListPage,
-    QuizPage,
-    LoginPage,
-    ResultPage, 
-    SubjectFilterPipe
-  ],
+  declarations: [AppComponent],
+  entryComponents: [],
   imports: [
     BrowserModule,
     HttpModule,
     HttpClientModule,
-    IonicModule.forRoot(MyApp),
-    
-  ],
-
-
-  bootstrap: [IonicApp],
-  entryComponents: [
-    MyApp,
-    HomePage,
-    ListPage,
-    QuizPage,
-    LoginPage,
-    ResultPage
+    IonicModule.forRoot(),
+    AppRoutingModule
   ],
   providers: [
-    QuizProvider,
-    GlobalProvider,
     StatusBar,
     SplashScreen,
-    {provide:ErrorHandler, useClass: IonicErrorHandler}
-  ]
+    HeaderColor, 
+    QuizProvider,
+    GlobalProvider,
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+  ],
+  bootstrap: [AppComponent]
 })
 export class AppModule {}

@@ -1,0 +1,78 @@
+.ios,.md{
+    .absolute-icon {
+        position: absolute;
+        left: var(--padding-end);
+        width: 43em;
+        height: 30px;
+
+    }
+      
+    span.title-change {
+        color: white;
+        margin-left: 40px;
+        font-size: 35px;
+        font-family: 'roboto regular';
+    }
+
+
+
+    ion-toolbar.welcome-card {
+        --padding-top: 4px;
+        --padding-bottom: 4px;
+        --padding-start: 4px;
+        --padding-end: 4px;
+        --min-height: 80px;
+        --ion-background-color:  rgb(81, 223, 116);
+        --ion-toolbar-background:  rgb(81, 223, 116);
+     
+     
+    }
+
+    @media (max-width: 400px) {
+        ion-col.changeCol-next-sm {
+            padding-left:100px;
+            margin-left:130px;
+            margin-top: -42px;
+        }
+    }
+     
+    @media (min-width: 410px){ 
+        ion-col.changeCol-next-md {
+            padding-left:100px;
+            margin-left:215px;
+            margin-top: -42px;
+        }
+    }
+
+
+    ion-label.questions-design {
+        --color: blue;
+        color: var(--color);
+        white-space: wrap !important;
+        word-wrap: break-word;
+        background: #f4f5f8;
+    }
+
+    ion-label.answer-align {
+        padding-right: initial;
+         margin-left: 20PX;
+    }
+
+    ion-button.change-color{
+        margin-left: 35px;
+        margin-right: 35px; 
+    }
+    
+    ion-list.change-color {
+        background: mediumspringgreen;
+    }
+
+    ion-item.change-color {
+      --background: mediumspringgreen !important;
+      --border-style:none !important;
+      
+    }
+    
+    
+
+}

@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Http, Response, Headers, RequestOptions, URLSearchParams } from '@angular/http';
 import {HttpClient} from '@angular/common/http';
-import { Observable } from 'rxjs/Rx';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/observable/throw';
+import { Observable } from 'rxjs';
+import { map, catchError } from "rxjs/operators";
 import { QuizMetadata} from '../model/quizMetadata';
 import { Constants} from '../utilities/Constants';
 import { Subject } from '../model/subject';
@@ -53,8 +52,8 @@ subject: Subject = new Subject();
 
      
          return this.http.get(url, {params:params})
-         .map(res => res.json())
-         .catch(error => Observable.throw(new Error(error.status)));
+         .pipe(map((response: any) => response.json()))
+          catchError(error => Observable.throw(new Error(error.status)));
     
     }
         
@@ -69,8 +68,8 @@ subject: Subject = new Subject();
         params.set("id","2")
     
         return this.http.get(url, {params:params})
-        .map(res => res.json())
-        .catch(error => Observable.throw(new Error(error.status)));
+        .pipe(map((response: any) => response.json()))
+         catchError(error => Observable.throw(new Error(error.status)));
 
     }    
 }   

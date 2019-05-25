@@ -1,0 +1,37 @@
+ion-content.check-element {
+    
+    --ion-background-color:#111D12 !important;
+ //   --background: #08023b !important;
+
+
+}
+
+.absolute-icon {
+    position: absolute;
+    left: var(--padding-start);
+}
+  
+ion-button.change-color{
+
+    --background: rgb(210, 223, 213) !important;
+      margin-left: 35px;
+      margin-right: 35px; 
+}
+
+span.text-color{
+
+    color: #08023b !important;
+    font-size:16px;
+    font-weight: 300;
+}
+
+
+ion-icon.host-element {
+    --align: left;
+    --padding: 1px;
+    --fill: #08023b !important;
+    --color: #08023b !important;
+    --background: #08023b !important;
+    -webkit-tap-highlight-color:  #08023b !important;
+}
+

@@ -1,0 +1,55 @@
+<ion-header>
+    <ion-toolbar class="welcome-card">
+          <ion-title>
+              <span class="title-change">PHYSICS</span>
+          </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content>
+
+<!-- <ion-list *ngFor="let x of (quizMetadata.questions | subjectFilter: subjectValue)">  -->
+
+  <ion-list class="change-color" *ngFor="let x of quizMetadata.questions">
+    <ion-radio-group [(ngModel)]="x.checked" allow-empty-selection = "true"
+                    name="radio-group" (ionChange)="radioGroupChange(x.checked)">
+       
+    <ion-card>
+
+      <ion-item text-wrap id="ioncad">
+
+        <ion-label  class="ion-text-wrap">{{x.question_number}} . {{x.question_expl}}</ion-label>      
+      
+      </ion-item>
+
+      <ion-item *ngFor= "let y of x.answers">
+          <ion-radio item-left value={{y.answer}} color=success></ion-radio>
+          <ion-label class="ion-text-wrap answer-align">{{y.answer}}</ion-label>
+      </ion-item>
+    </ion-card>
+  </ion-radio-group>
+</ion-list>
+
+<ion-list class="change-color">
+        <ion-item class="change-color">
+          <ion-button  color="success" size="small" slot="end"> 
+                <span>Next</span>
+          </ion-button>
+          
+          <ion-button color="success" size="small" slot="start">
+              <span>Prev</span>
+          </ion-button> 
+
+        </ion-item>
+</ion-list>
+
+<ion-list class="change-color">
+      
+      <ion-button  expand="block" color="success" class="change-color" (click)="submit()">
+                <span class="text-color">Proceed</span>
+      </ion-button>
+      
+</ion-list>
+</ion-content>

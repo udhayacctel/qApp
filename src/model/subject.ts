@@ -1,8 +1,8 @@
 export class Subject {
 
-isPhysics: boolean;
-isChemistry: boolean;
-isBiology: boolean;
-
-
-}
+    isPhysics: boolean;
+    isChemistry: boolean;
+    isBiology: boolean;
+    
+    
+    }

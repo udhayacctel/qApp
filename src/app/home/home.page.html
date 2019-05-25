@@ -1,0 +1,87 @@
+	<ion-header>
+
+    <ion-toolbar color=secondary-tint>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>
+        NEET
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  
+  <ion-content fullscreen=true>
+    <ion-card color=success>
+      <ion-grid no-padding>
+        <ion-row></ion-row>
+        <ion-row> <br></ion-row>
+        <ion-row>
+          <ion-label>Udhaya Prakash Pachiyappan</ion-label>
+        </ion-row>
+        <ion-row>
+          <ion-col size="3">
+            <ion-avatar>
+              <img src="https://secure.gravatar.com/avatar/5dd409d4ac429338afbbf44315b47506">
+            </ion-avatar>
+  
+  
+          </ion-col>
+          <ion-col>
+            <ion-item color=light>
+              <ion-label>Total Tests</ion-label>
+              <ion-label>20</ion-label>
+            </ion-item>
+  
+            <ion-item color=light>
+              <ion-label>Ahead of</ion-label>
+              <ion-label>70%</ion-label>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+  
+    </ion-card>
+  
+  
+  
+    <ion-list color=primary>
+    
+      <ion-card>
+          <ion-item>
+              <ion-label class="change-label"> Full test</ion-label>
+              <ion-toggle color="success" class="change-style" checked=true [(ngModel)]="takeFullTest"
+                (ionChange)="changeTakeFullTest()"></ion-toggle>
+          </ion-item>
+      </ion-card>
+  
+      <ion-card> 
+          <ion-item>
+              <ion-label class="change-label">Physics</ion-label>
+              <ion-checkbox color="success" class="change-style" checked=true [(ngModel)]="this.subject.isPhysics"
+                (ionChange)="changesubject()"></ion-checkbox>
+            </ion-item>
+      </ion-card>
+  
+      
+      <ion-card>
+          <ion-item>
+              <ion-label class="change-label">Chemistry</ion-label>
+              <ion-checkbox color="success" class="change-style" checked=true [(ngModel)]="this.subject.isChemistry"
+                (ionChange)="changesubject()"></ion-checkbox>
+            </ion-item>      
+      </ion-card>
+  
+      <ion-card>
+          <ion-item>
+              <ion-label class="change-label">Biology</ion-label>
+              <ion-checkbox color="success" class="change-style" checked=true [(ngModel)]="this.subject.isBiology"
+                (ionChange)="changesubject()"></ion-checkbox>
+            </ion-item>
+      </ion-card>
+      
+      <ion-button expand="block" color="success" class="change-color" (click)="submit()">
+        <span class="text-color">Proceed</span>
+      </ion-button>
+    </ion-list>
+  </ion-content>
